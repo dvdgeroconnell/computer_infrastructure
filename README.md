@@ -1,4 +1,4 @@
-# Computer-Infrastructure  
+# computer_infrastructure  
 This is the GitHub repository for the assignment work associated with the Computer Infrastructure module.  
 ***  
   
