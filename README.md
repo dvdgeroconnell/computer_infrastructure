@@ -21,3 +21,7 @@ More information on writing in Markdown can be found [in Github's documentation]
 
 ## About This Project  
 This repository contains the following:  
+
+## Getting Started
+1. Clone this repository
+2. Run the code... to be completed
