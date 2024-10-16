@@ -25,3 +25,33 @@ This repository contains the following:
 ## Getting Started
 1. Clone this repository
 2. Run the code... to be completed
+
+## Task 1
+### Problem Statement
+Using the command line, create a directory (that is, a folder) named data at the root of your repository. Inside data, create two subdirectories: timestamps and weather.  
+
+### Commands (in Codespace)
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure (main) **$ mkdir data**   
+
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure (main) **$ mkdir data/timestamps**   
+
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure (main) $ **mkdir data/weather**     
+
+## Task 2
+### Problem Statement
+Navigate to the data/timestamps directory. Use the date command to output the current date and time, appending the output to a file named now.txt. Make sure to use the >> operator to append (not overwrite) the file. Repeat this step ten times, then use the more command to verify that now.txt has the expected content.   
+
+### Commands (in Codespace)
+
+*Change directory:*  
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure (main) $ **cd data/timestamps**  
+
+*To run once:*  
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ **date >> now.txt**  
+
+*To run 10 times:*  
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ **for i in {1..10}**  
+**> do**  
+**> date >> now.txt**  
+**> done**  
+
