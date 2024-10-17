@@ -58,3 +58,18 @@ Navigate to the data/timestamps directory. Use the date command to output the cu
 **> date >> now.txt**  
 **> done**  
 
+## Task 3
+### Commands (in Codespace)
+
+*List format options for date command*  
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ **man date**  
+   
+*Output date and time as YYYYmmdd_HHMMSS*  
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ **date +%Y%m%d_%H%M%S**  
+Output: 20241017_192135  
+  
+*Output date and time as YYYYmmdd_HHMMSS to formatted.txt*  
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ **date +%Y%m%d_%H%M%S >> formatted.txt**  
+
+### Notes
+The *'>> filename'* part of the command appends to an existing file or creates a new one if it doesn't already exist.
