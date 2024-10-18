@@ -73,3 +73,8 @@ Output: 20241017_192135
 
 ### Notes
 The *'>> filename'* part of the command appends to an existing file or creates a new one if it doesn't already exist.
+
+## References
+
+1. https://www.cyberciti.biz/faq/bsd-appleosx-linux-bash-shell-run-command-n-times/  
+   This was useful in figuring out how to run a shell command multiple times, as required in Task 2.
