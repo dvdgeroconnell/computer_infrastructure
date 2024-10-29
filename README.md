@@ -71,10 +71,20 @@ Output: 20241017_192135
 *Output date and time as YYYYmmdd_HHMMSS to formatted.txt*  
 @dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ **date +%Y%m%d_%H%M%S >> formatted.txt**  
 
-### Notes
-The *'>> filename'* part of the command appends to an existing file or creates a new one if it doesn't already exist.
+### Notes  
+The *'>> filename'* part of the command appends to an existing file or creates a new one if it doesn't already exist.  
+
+## Task 4  
+### Commands (in Codespace)  
+
+*Create an empty file with the name in the YYYYmmdd_HHMMSS.txt format*  
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ touch `date +"%Y%m%d_%H%M%S.txt"`
+
 
 ## References
 
 1. https://www.cyberciti.biz/faq/bsd-appleosx-linux-bash-shell-run-command-n-times/  
    This was useful in figuring out how to run a shell command multiple times, as required in Task 2.
+
+  
+#### End
