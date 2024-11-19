@@ -22,6 +22,12 @@ More information on writing in Markdown can be found [in Github's documentation]
 ## About This Project  
 This repository contains the following:  
 
+### weather.ipynb  
+xx  
+
+## weather.sh  
+A bash script to download a file from the Irish Meteorological Service for the weather station provided as a command line argument for the date that the script is run. The file is named with the weather station and date of download.  
+
 ## Getting Started
 1. Clone this repository
 2. Run the code... to be completed
