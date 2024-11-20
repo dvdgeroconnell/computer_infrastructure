@@ -51,7 +51,6 @@ Using the command line, create a directory (that is, a folder) named data at the
 Navigate to the data/timestamps directory. Use the date command to output the current date and time, appending the output to a file named now.txt. Make sure to use the >> operator to append (not overwrite) the file. Repeat this step ten times, then use the more command to verify that now.txt has the expected content.   
 
 ### Commands (in Codespace)
-
 *Change directory:*  
 @dvdgeroconnell ➜ /workspaces/computer_infrastructure (main) $ **cd data/timestamps**  
 
@@ -66,7 +65,6 @@ Navigate to the data/timestamps directory. Use the date command to output the cu
 
 ## Task 3
 ### Commands (in Codespace)
-
 *List format options for date command*  
 @dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ **man date**  
    
@@ -78,13 +76,46 @@ Output: 20241017_192135
 @dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ **date +%Y%m%d_%H%M%S >> formatted.txt**  
 
 ### Notes  
-The *'>> filename'* part of the command appends to an existing file or creates a new one if it doesn't already exist.  
+The *'>> filename'* part of the command appends to an existing file or creates a new one if it doesn't already exist. Using *'>'* instead of *'>>'* appends to an existing file instead of replacing.
 
 ## Task 4  
 ### Commands (in Codespace)  
-
 *Create an empty file with the name in the YYYYmmdd_HHMMSS.txt format*  
-@dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ touch `date +"%Y%m%d_%H%M%S.txt"`
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ touch \`date +"%Y%m%d_%H%M%S.txt"\`  
+
+### Notes  
+The backtick has a special meaning. Everything contained between backticks is executed first, and the output of that execution is used by the main command.  
+
+## Task 5  
+### Commands (in Codespace)  
+*Change to the /weather/data directory*   
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure (main) $ cd data/weather  
+
+*...and download the latest weather data for the Athenry weather station from Met Eireann using wget, using the -O \<filename\> option to save the file as weather.json*
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/weather (main) $ wget -O "weather.json" https://prodapi.metweb.ie/observations/athenry/today    
+
+### Notes  
+The *'-O'* option writes the retrieved content to the filename following in double quotes.  
+
+## Task 6  
+### Commands (in Codespace)  
+*Modify the command in Task 5 to save the downloaded file with a timestamped name in the format* YYYYmmdd_HHMMSS.json.  
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/weather (main) $ wget -O \`date +"%Y%m%d_%H%M%S.json"\` https://prodapi.metweb.ie/observations/athenry/today
+
+### Notes
+The *'date'* command prints out the system date and time in the specified format. In this case, it is passed to the *'wget -O'* command as the filename.  
+
+## Task 7
+### Requirement
+*Write a bash script called* weather.sh *in the root of the repository. This script should automate the process from Task 6, saving the weather data to the* data/weather *directory.*  
+  
+*Make the script executable...*  
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure (main) $ chmod u+x weather.sh  
+
+*... and run it.*   
+@dvdgeroconnell ➜ /workspaces/computer_infrastructure (main) $ ls -l weather.sh  
+-rwxrw-rw- 1 codespace codespace 467 Nov 20 17:23 weather.sh   
+
 
 
 ## References
