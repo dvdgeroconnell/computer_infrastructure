@@ -44,7 +44,7 @@ Using the command line, create a directory (that is, a folder) named data at the
 @dvdgeroconnell ➜ /workspaces/computer_infrastructure (main) $ **mkdir data/weather**     
 
 ### Notes
-/data/weather was not pushed to Github repo, most likely because it is empty.
+/data/weather was not pushed to Github repo, most likely because it is empty.  
 
 ## Task 2
 ### Problem Statement
@@ -64,6 +64,7 @@ Navigate to the data/timestamps directory. Use the date command to output the cu
 **> done**  
 
 ## Task 3
+
 ### Commands (in Codespace)
 *List format options for date command*  
 @dvdgeroconnell ➜ /workspaces/computer_infrastructure/data/timestamps (main) $ **man date**  
