@@ -24,8 +24,10 @@ More information on writing in Markdown can be found in [Github's documentation]
 This repository contains the following:  
 
 ### .gitignore
+A GitHub-generated template which may be customized with extra files (names or types) and folders that GitHub should exclude from the repository.  
 
 ### requirements.txt
+A list of packages required by the Python install for the notebook, script or program to run.  
 
 ### weather.ipynb  
 A Jupyter notebook containing the responses to the module assessment.
