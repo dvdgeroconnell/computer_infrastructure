@@ -1,0 +1,12 @@
+name: Check Software
+
+# Don't need the square brackets.
+# There will be a button I can click on the Actions page
+on: workflow_dispatch
+
+jobs:
+  check:
+    runs_on: ubuntu-latest
+    steps:
+      name: Output Date
+        run: date
