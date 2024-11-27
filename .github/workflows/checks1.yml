@@ -6,7 +6,7 @@ on: workflow_dispatch
 
 jobs:
   check:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      name: Output Date
+      - name: Output Date
         run: date
