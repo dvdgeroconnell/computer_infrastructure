@@ -14,5 +14,6 @@ jobs:
         run: wget --version
       - name: Test curl
         run: curl --version
+# Comment out the following commands...
 #     - name: Test brew
 #       run: brew --version

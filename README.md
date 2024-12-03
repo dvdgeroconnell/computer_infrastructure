@@ -60,6 +60,8 @@ These files are contained in the .github/workflows subdirectory.
 This yaml file contains a workflow called "GitHub Actions Demo" which in turns contains a number of commands which run on a git push and provide status information.    
 #### check_sw.yml  
 This yaml file contains a workflow called "Check Software" which prints out the version information for a number of bash commands, including *date*, *wget* and *curl*. It needs to be explicitly run from the GitHub Actions tab.   
+#### weather-data.yml
+This yaml file retrieves the weather data for a hardcoded station (Athenry) each day at 10:00am.
 
 ## Getting Started
 1. Clone this repository.
