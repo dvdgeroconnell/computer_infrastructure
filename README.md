@@ -21,7 +21,7 @@ This README has been based on the guidelines in [GitHub's documentation on READM
 More information on writing in Markdown can be found in [Github's documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). 
 
 ## About This Project  
-This repository contains the following:  
+This repository contains the following files and folders:  
 
 ### .gitignore
 A GitHub-generated template which may be customized with extra files (names or types) and folders that GitHub should exclude from the repository.  
@@ -37,8 +37,11 @@ It includes an analysis of a sample dataset for a chosen weather station downloa
 A bash script to download a file from the Irish Meteorological Service for the weather station provided as a command line argument for the date that the script is run. The file is named with the weather station and date of download.  
 The weather station may be any of those listed by Met Éireann [here](https://www.met.ie/climate/weather-observing-stations).  
 TThe script is run by typing **./ weather.sh \<weather station\>**.  
-Any station name containing a white space should be contained in single quotes, for example **./weather.sh 'Sherkin Island'**.  
-The white space is replaced with '_' in the file name.  
+Any station name containing a white space should be contained in single (or double) quotes, for example **./weather.sh 'Sherkin Island'**.  
+The white space is replaced with '_' in the name of the created file.  
+
+### weather_original.sh
+This is the original version of *weather.sh*, it does not support station names containing a white space.  
 
 ### subdirectories
 The following subdirectories are included.  
@@ -46,8 +49,17 @@ The following subdirectories are included.
 Contains the /timestamps and /weather subdirectories.  
 #### ./data/weather
 Contains the files with json formatted data downloaded from Met Éireann.  
-#### data/timestamps
+#### .data/timestamps
 Contains files created as a result of using timestamps, either in the filename or in the body of the file.   
+#### .github/workflows
+Contains the yaml workflows which are executed by GitHub Actions.
+
+### workflows  
+These files are contained in the .github/workflows subdirectory.   
+#### checks.yml  
+This yaml file contains a workflow called "GitHub Actions Demo" which in turns contains a number of commands which run on a git push and provide status information.    
+#### check_sw.yml  
+This yaml file contains a workflow called "Check Software" which prints out the version information for a number of bash commands, including *date*, *wget* and *curl*. It needs to be explicitly run from the GitHub Actions tab.   
 
 ## Getting Started
 1. Clone this repository.
