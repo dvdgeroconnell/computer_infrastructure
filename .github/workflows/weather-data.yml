@@ -16,8 +16,8 @@ jobs:
       # Step 1: Check out the repository
       - name: Check out repository
         uses: actions/checkout@v4
-        name: Retrieve weather data
-      - run: "./weather.sh athenry"
+      - name: Retrieve weather data
+        run: "./weather.sh athenry"
 
 #      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
 #      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
