@@ -5,6 +5,9 @@ on:
     - cron: '30 18 * * *' # Runs every day at 10:00am
   workflow_dispatch:      # Allows manual triggering of the workflow
 
+permissions:
+  contents: write         # Grant write permissions to push changes
+
 jobs:
   Retrieve_Weather_Data:
     runs-on: ubuntu-latest
