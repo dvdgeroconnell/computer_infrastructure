@@ -16,8 +16,8 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Retrieve weather data
-#        run: "./weather.sh athenry"
-        run: ./weather.sh athenry
+        run: "./weather.sh athenry"
+#        run: ./weather.sh athenry
       - name: Check in repository 
         run: |
           git config --global user.name "github-actions[bot]"
