@@ -1,6 +1,6 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-#on: [push] # Commenting this out as don't need it running for every commit for now 
+on: [push] # Commenting this out as don't need it running for every commit for now 
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
