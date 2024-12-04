@@ -1,6 +1,5 @@
 name: Retrieve Weather Data
 run-name: ${{ github.actor }} is retrieving weather data 🚀
-
 on:
   schedule:
     - cron: '30 18 * * *' # Runs every day at 10:00am
