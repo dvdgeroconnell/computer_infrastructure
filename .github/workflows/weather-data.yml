@@ -5,14 +5,13 @@ on:
   schedule:
     - cron: '30 18 * * *' # Runs every day at 10:00am
   workflow_dispatch:      # Allows manual triggering of the workflow
-  #push:                  # Trigger on commit (test)
 
 jobs:
   Retrieve_Weather_Data:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "Testing weather data"
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "Retrieving weather data"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
 
 #      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
