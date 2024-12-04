@@ -3,8 +3,9 @@ run-name: ${{ github.actor }} is retrieving weather data 🚀
 
 on:
   schedule:
-    - cron: "0 18 * * *" # Runs every day at 10:00am
-  workflow_dispatch: # Allows manual triggering of the workflow
+    - cron: "0 18 * * *"  # Runs every day at 10:00am
+  workflow_dispatch:      # Allows manual triggering of the workflow
+  push:                   # Trigger on commit (test)
 
 jobs:
   Retrieve_Weather_Data:
