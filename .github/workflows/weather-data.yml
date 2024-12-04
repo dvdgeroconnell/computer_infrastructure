@@ -18,7 +18,6 @@ jobs:
       - name: Retrieve weather data
 #        run: "./weather.sh athenry"
         run: ./weather.sh athenry
-
       - name: Check in repository 
         run: |
           git config --global user.name "github-actions[bot]"
