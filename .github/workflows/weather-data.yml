@@ -19,6 +19,8 @@ jobs:
         run: "./weather.sh athenry"
       - name: Check in repository 
         run: |
+          git config --global user.email "dvdgeroconnell@gmail.com"
+          git config --global user.name "David O'Connell"
           git add .
           git commit -m "Adding latest weather in Athenry"
           git push
