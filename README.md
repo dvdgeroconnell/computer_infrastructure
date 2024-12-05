@@ -80,7 +80,10 @@ The Computer Infrastructure lectures were heavily referred to throughout this pr
 2. https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions  
 GitHub's workflow documentation was used to get the workflow running.  
 
-3. https://www.cyberciti.biz/faq/bsd-appleosx-linux-bash-shell-run-command-n-times/  
+3. https://www.geeksforgeeks.org/  
+This site provides very user-friendly explanations with examples for pandas, matplotlib and seaborn topics.  
+
+4. https://www.cyberciti.biz/faq/bsd-appleosx-linux-bash-shell-run-command-n-times/  
 This was useful in figuring out how to run a shell command multiple times, as required in Task 2.  
 
 ### End
