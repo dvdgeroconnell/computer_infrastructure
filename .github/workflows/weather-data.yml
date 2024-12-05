@@ -1,8 +1,21 @@
+# weather-data.yml
+#
+# A workflow to be run by GitHub Actions on a scheduled basis (daily @ 10am).
+# The workflow checks out the repository, executes the weather station script
+# (weather.sh) for weather station Athenry and checks the respository back in 
+# with the newly retrieved weather information.
+# It also includes a workflow_dispatch event so it can be tested manually.
+# The file is written in yaml.
+#
+# Author: David O'Connell
+# Based on: 2425 - Computer Infrastructure week 09 lectures (Ian McLoughlin)
+#
+
 name: Retrieve Weather Data
 run-name: ${{ github.actor }} is retrieving weather data 🚀
 on:
   schedule:
-    - cron: '15 11 * * *' # Runs every day at 23:00
+    - cron: '0 10 * * *'  # Runs every day at 10am
   workflow_dispatch:      # Allows manual triggering of the workflow
 
 permissions:
@@ -15,13 +28,13 @@ jobs:
       - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "Retrieving weather data"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      # Step 1: Check out the repository
+      # Check out the repository
       - name: Check out repository
-      # Use an existing action - see https://github.com/actions/checkout
+        # Use an existing action - see https://github.com/actions/checkout
         uses: actions/checkout@v4
       - name: Retrieve weather data
         run: ./weather.sh athenry
-#        run: "./weather.sh athenry"
+      # Check in the repository with the latest weather file
       - name: Check in repository
         run: |
           git config --global user.name "github-actions[bot]"
@@ -32,6 +45,7 @@ jobs:
           git commit -m "Adding latest weather in Athenry"
           git push origin main
 
+# Not required...
 #        env:
-          # Ensure permissions for pushing changes
+           # Ensure permissions for pushing changes
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
