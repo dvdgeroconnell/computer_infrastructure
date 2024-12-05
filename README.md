@@ -1,5 +1,5 @@
 # README - computer_infrastructure  
-This is the GitHub repository for the assignment work associated with the Computer Infrastructure module.  
+This is the GitHub repository for the assignments associated with the Computer Infrastructure module.  
 ***  
   
 | Topic | Details |
@@ -30,8 +30,8 @@ A GitHub-generated template which may be customized with extra files (names or t
 A list of packages required by the Python install for the notebook, script or program to run.  
 
 ### weather.ipynb  
-A Jupyter notebook containing the responses to the module assessment.
-It includes an analysis of a sample dataset for a chosen weather station downloaded from Met Éireann.
+A Jupyter notebook containing the responses to the module assessment, including an analysis of a sample dataset for a chosen weather station downloaded from Met Éireann.  
+[Jupyter Notebook](https://jupyter.org/) is a web-based interactive environment used to create notebook documents that can contain live code, equations, visualizations, media and other computational outputs. Jupyter notebooks are often used by programmers and data scientists to document, experiment, document and demonstrate code-based workflows.
 
 ### weather.sh  
 A bash script to download a file from the Irish Meteorological Service for the weather station provided as a command line argument for the date that the script is run. The file is named with the weather station and date of download.  
