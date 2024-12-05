@@ -2,7 +2,7 @@ name: Retrieve Weather Data
 run-name: ${{ github.actor }} is retrieving weather data 🚀
 on:
   schedule:
-    - cron: '00 23 * * *' # Runs every day at 23:00
+    - cron: '15 11 * * *' # Runs every day at 23:00
   workflow_dispatch:      # Allows manual triggering of the workflow
 
 permissions:
@@ -26,8 +26,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.email "dvdgeroconnell@gmail.com"
-          git config --global user.name "David O'Connell"
+#          git config --global user.email "dvdgeroconnell@gmail.com"
+#          git config --global user.name "David O'Connell"
           git add .
           git commit -m "Adding latest weather in Athenry"
           git push origin main
