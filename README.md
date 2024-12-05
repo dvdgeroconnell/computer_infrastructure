@@ -59,19 +59,28 @@ These files are contained in the .github/workflows subdirectory.
 #### checks.yml  
 This yaml file contains a workflow called "GitHub Actions Demo" which in turns contains a number of commands which run on a git push and provide status information.    
 #### check_sw.yml  
-This yaml file contains a workflow called "Check Software" which prints out the version information for a number of bash commands, including *date*, *wget* and *curl*. It needs to be explicitly run from the GitHub Actions tab.   
+This yaml file contains a workflow called "Check Software" which prints out the version information for a number of bash commands, including *date*, *wget* and *curl*. It needs to be explicitly run from the GitHub Actions tab.  
+#### test_cron.yml  
+This file was created to test the 
 #### weather-data.yml
-This yaml file retrieves the weather data for a hardcoded station (Athenry) each day at 10:00am.
+This yaml file retrieves the weather data for a hardcoded station (Athenry) each day at 10:00am. It is run as a workflow by GitHub Actions on a scheduled basis. The weather data
+is saved in a time and date stamped file to the repository in /data/weather. It also includes a workflow_dispatch event so it can be tested manually.  
 
-## Getting Started
+## Getting Started  
+Note that as this repository contains GitHub workflows, it is probably better cloned to a GitHub Codespace.  
 1. Clone this repository.
 2. Review the README.
 3. Review the *weather.sh* notebook.
 
 ## References
 
-1. https://www.cyberciti.biz/faq/bsd-appleosx-linux-bash-shell-run-command-n-times/  
-   This was useful in figuring out how to run a shell command multiple times, as required in Task 2.
+1. https://atlantictu-my.sharepoint.com/personal/ian_mcloughlin_atu_ie/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fian%5Fmcloughlin%5Fatu%5Fie%2FDocuments%2Fstudent%5Fshares%2Fcomputer%5Finfrastructure&ga=1  
+The Computer Infrastructure lectures were heavily referred to throughout this project.  
 
-  
+2. https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions  
+GitHub's workflow documentation was used to get the workflow running.  
+
+3. https://www.cyberciti.biz/faq/bsd-appleosx-linux-bash-shell-run-command-n-times/  
+This was useful in figuring out how to run a shell command multiple times, as required in Task 2.  
+
 ### End
