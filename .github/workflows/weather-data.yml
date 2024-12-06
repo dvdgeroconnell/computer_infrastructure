@@ -1,6 +1,6 @@
 # weather-data.yml
 #
-# A workflow to be run by GitHub Actions on a scheduled basis (daily @ 10am).
+# A workflow to be run by GitHub Actions on a scheduled basis (daily at 10am).
 # The workflow checks out the repository, executes the weather station script
 # (weather.sh) for weather station Athenry and checks the respository back in 
 # with the newly retrieved weather information.
