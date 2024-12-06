@@ -76,9 +76,11 @@ This yaml file retrieves the weather data for a hardcoded station (Athenry) each
 
 ## Getting Started  
 Note that this repository contains GitHub workflows.  
-1. Clone this repository, either to your local machine or to a [GitHub Codespace](https://github.com/features/codespaces).
-2. Review the README.
-3. Review the *weather.sh* notebook.
+1. Clone this repository, either  
+  a) to your local machine - Visual Studio Code and Anaconda are pre-requisites.  
+  b) using [GitHub Codespaces](https://github.com/features/codespaces) - click the green `Code` button at the top of the repository and select Codespaces.  
+2. Review the README (this document).
+3. Open the *weather.sh* notebook in Visual Studio Code.
 
 ## References
 
