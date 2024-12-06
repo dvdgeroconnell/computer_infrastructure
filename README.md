@@ -27,7 +27,7 @@ This repository contains the following files and folders:
 A GitHub-generated template which may be customized with extra files (names or types) and folders that GitHub should exclude from the repository.  
 
 ### requirements.txt
-A list of packages required by the Python install for the notebook, script or program to run.  
+A list of packages required by the Python install for the notebook, script or program to run. This file does not include the packages that are part of the standard Anaconda install.  
 
 ### weather.ipynb  
 A Jupyter notebook containing the responses to the module assessment, including an analysis of a sample dataset for a chosen weather station downloaded from Met Éireann.  
