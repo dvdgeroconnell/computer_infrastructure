@@ -27,8 +27,10 @@ This repository contains the following files and folders:
 A GitHub-generated template which may be customized with extra files (names or types) and folders that GitHub should exclude from the repository.  
 
 ### requirements.txt
-A list of packages required by the Python install for the notebook, script or program to run. This file does not include the packages that are part of the standard Anaconda install.  
-
+A list of packages required by the Python install for the Jupyter notebook, script or program to run. This file does not include the packages that are part of the standard Anaconda install. To install the packages in *requirements.txt*, use the following command:  
+```  
+pip install -r requirements.txt
+```  
 ### weather.ipynb  
 A Jupyter notebook containing the responses to the module assessment, including an analysis of a sample dataset for a chosen weather station downloaded from Met Éireann.  
 [Jupyter Notebook](https://jupyter.org/) is a web-based interactive environment used to create notebook documents that can contain live code, equations, visualizations, media and other computational outputs. Jupyter notebooks are often used by programmers and data scientists to document, experiment, document and demonstrate code-based workflows.
@@ -36,8 +38,15 @@ A Jupyter notebook containing the responses to the module assessment, including 
 ### weather.sh  
 A bash script to download a file from the Irish Meteorological Service for the weather station provided as a command line argument for the date that the script is run. The file is named with the weather station and date of download.  
 The weather station may be any of those listed by Met Éireann [here](https://www.met.ie/climate/weather-observing-stations).  
-TThe script is run by typing **./ weather.sh \<weather station\>**.  
-Any station name containing a white space should be contained in single (or double) quotes, for example **./weather.sh 'Sherkin Island'**.  
+The script is run by typing the following command:  
+```
+./weather.sh <weather station>
+```  
+Any station name containing a white space should be contained in single (or double) quotes, for example:
+```
+./weather.sh 'Sherkin Island'
+```  
+
 The white space is replaced with '_' in the name of the created file.  
 
 ### weather_original.sh
@@ -57,18 +66,17 @@ Contains the yaml workflows which are executed by GitHub Actions.
 ### workflows  
 These files are contained in the .github/workflows subdirectory.   
 #### checks.yml  
-This yaml file contains a workflow called "GitHub Actions Demo" which in turns contains a number of commands which run on a git push and provide status information.    
+This yaml file contains a workflow called "GitHub Actions Demo" which in turns contains a number of commands which run on `git push` and provide status information.    
 #### check_sw.yml  
-This yaml file contains a workflow called "Check Software" which prints out the version information for a number of bash commands, including *date*, *wget* and *curl*. It needs to be explicitly run from the GitHub Actions tab.  
+This yaml file contains a workflow called "Check Software" which prints out the version information for a number of bash commands, including `date`, `wget` and `curl`. It needs to be explicitly run from the GitHub Actions tab.  
 #### test_cron.yml  
-This file was created to test the 
+This file was created to test the `cron` command.  
 #### weather-data.yml
-This yaml file retrieves the weather data for a hardcoded station (Athenry) each day at 10:00am. It is run as a workflow by GitHub Actions on a scheduled basis. The weather data
-is saved in a time and date stamped file to the repository in /data/weather. It also includes a workflow_dispatch event so it can be tested manually.  
+This yaml file retrieves the weather data for a hardcoded station (Athenry) each day at 10:00am. It is run as a workflow by GitHub Actions on a scheduled basis. The weather data is saved in a time and date stamped file to the repository in /data/weather. It also includes a workflow_dispatch event so it can be tested manually.  
 
 ## Getting Started  
-Note that as this repository contains GitHub workflows, it is probably better cloned to a GitHub Codespace.  
-1. Clone this repository.
+Note that this repository contains GitHub workflows.  
+1. Clone this repository, either to your local machine or to a [GitHub Codespace](https://github.com/features/codespaces).
 2. Review the README.
 3. Review the *weather.sh* notebook.
 
