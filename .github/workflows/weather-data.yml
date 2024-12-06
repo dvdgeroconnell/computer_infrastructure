@@ -12,7 +12,7 @@
 #
 
 name: Retrieve Weather Data
-run-name: ${{ github.actor }} is retrieving weather data 🚀
+run-name: ${{ github.actor }} is retrieving weather data
 on:
   schedule:
     - cron: '0 10 * * *'  # Runs every day at 10am
@@ -27,25 +27,22 @@ jobs:
     steps:
       - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "Retrieving weather data"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - run: echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       # Check out the repository
       - name: Check out repository
         # Use an existing action - see https://github.com/actions/checkout
         uses: actions/checkout@v4
-      - name: Retrieve weather data
-        run: ./weather.sh athenry
+      - name: Retrieve the weather data
+        run: "./weather.sh athenry"
+
       # Check in the repository with the latest weather file
       - name: Check in repository
         run: |
-          git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.email "dvdgeroconnell@gmail.com"
-          git config --global user.name "David O'Connell"
+          git config --global user.name "github-actions[bot]"
           git add .
           git commit -m "Adding latest weather in Athenry"
-          git push origin main
-
-# Not required...
-#        env:
-           # Ensure permissions for pushing changes
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push
+        env:
+          # Ensure permissions for pushing changes
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
