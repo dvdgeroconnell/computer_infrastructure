@@ -15,7 +15,8 @@ name: Retrieve Weather Data
 run-name: ${{ github.actor }} is retrieving weather data
 on:
   schedule:
-    - cron: '0 10 * * *'  # Runs every day at 10am
+    - cron: '0 6 * * *'   # Runs every day at 6am - changed from 10am as it seems that everyone's workflow running 
+                          # at the same time might have been causing Met Eireann's website to block them.
   workflow_dispatch:      # Allows manual triggering of the workflow
 
 permissions:

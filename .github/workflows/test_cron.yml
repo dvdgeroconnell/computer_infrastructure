@@ -8,8 +8,9 @@ name: Test cron
 run-name: ${{ github.actor }} is testing cron
 
 on:
-  schedule:
-    - cron: "30 22 * * *" # Runs every day at 22:30
+# commenting run on schedule out now, because I know it is working and no longer need a daily run
+#  schedule:
+#    - cron: "30 22 * * *" # Runs every day at 22:30
   workflow_dispatch:      # Allows manual triggering of the workflow
 
 jobs:
