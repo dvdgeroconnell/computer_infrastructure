@@ -20,7 +20,7 @@ Link to repository - [Computer Infrastructure](https://github.com/dvdgeroconnell
 This README has been based on the guidelines in [GitHub's documentation on READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes).  
 More information on writing in Markdown can be found in [Github's documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). 
 
-## About This Project  
+## About This Repository  
 This repository contains the following files and folders:  
 
 ### .gitignore
@@ -72,7 +72,22 @@ This yaml file contains a workflow called "Check Software" which prints out the 
 #### test_cron.yml  
 This file was created to test the `cron` command.  
 #### weather-data.yml
-This yaml file retrieves the weather data for a hardcoded station (Athenry) each day at 10:00am. It is run as a workflow by GitHub Actions on a scheduled basis. The weather data is saved in a time and date stamped file to the repository in /data/weather. It also includes a workflow_dispatch event so it can be tested manually.  
+This yaml file retrieves the weather data for a hardcoded station (Athenry) each day at 6:00am. It is run as a workflow by GitHub Actions on a scheduled basis. The weather data is saved in a time and date stamped file to the repository in /data/weather. It also includes a workflow_dispatch event so it can be tested manually.  
+
+## Final Project
+The purpose of the Final Project is to automate the *weather.sh* script to run daily and push the new data to the repository. This involved:  
+  
+- Creating a GitHub Actions workflow. This workflow is defined in the *weather-data.yml* file contained in the .github/workflows directory.  
+- Use the `schedule` event with `cron` to run the script daily at 6am. It was originally set for 10am, but was subsequently changed to avoid all projects hitting the Met Éireann API at the same time. The file also includes a `workflow_dispatch` event.  
+- The file also specifies that a Ubuntu virtual machine (`ubuntu-latest`) should be used to run the workflow. It clones the repository, executes the *weather.sh* script, then commits and pushes the changes back to the repository.
+-  
+<p>
+<!-- <div style="text-align: center" font=10 weight=bold> Galway Wind Park </div> -->
+<div style="text-align: center;">
+    <img src="img/Galway-Wind-Park.jpg" width="50%">
+</div>
+<div style="text-align: center" font = 7> Log example </div> 
+</p>
 
 ## Getting Started  
 Note that this repository contains GitHub workflows.  
