@@ -106,7 +106,7 @@ Note that this repository contains GitHub workflows.
   a) to your local machine - [Visual Studio Code](https://code.visualstudio.com/download) and [Anaconda](https://www.anaconda.com/download) are pre-requisites.  
   b) using [GitHub Codespaces](https://github.com/features/codespaces) - click the green `Code` button at the top of the repository and select Codespaces.  
 2. Review the README (this document).  
-3. Open the *weather.sh* notebook in Visual Studio Code.  
+3. Open the *weather.ipynb* notebook in Visual Studio Code.  
 
 ## References
 
