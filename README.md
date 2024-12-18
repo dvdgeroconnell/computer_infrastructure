@@ -110,12 +110,14 @@ Note that this repository contains GitHub workflows.
 
 ## References
 
-Note: other specific references are contained throughout the document.  
+Note: other specific references are contained as hyperlinks throughout the document.  
 
-1. https://atlantictu-my.sharepoint.com/personal/ian_mcloughlin_atu_ie/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fian%5Fmcloughlin%5Fatu%5Fie%2FDocuments%2Fstudent%5Fshares%2Fcomputer%5Finfrastructure&ga=1  
-The Computer Infrastructure lectures were heavily referred to throughout this project.  
+The [Computer Infrastructure](https://atlantictu-my.sharepoint.com/personal/ian_mcloughlin_atu_ie/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fian%5Fmcloughlin%5Fatu%5Fie%2FDocuments%2Fstudent%5Fshares%2Fcomputer%5Finfrastructure&ga=1) lectures were heavily referred to for this project.  
 
-2. https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions  
-GitHub's workflow documentation was used to get the workflow running.  
+[GitHub's workflow documentation](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions) was used to get the workflow running.  
+  
+See the ***About this Readme*** section above for information on the resources used to write this document.  
+   
+See the ***References*** section in the *weather.ipynb* notebook for the references used to complete the tasks and create the notebook.  
 
 ### End
